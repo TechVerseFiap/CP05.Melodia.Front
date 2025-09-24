@@ -16,11 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Demo button (simple alert for demo)
-  const playDemo = document.getElementById('play-demo');
-  playDemo.addEventListener('click', () => {
-    alert('Demonstração do player (mock).');
-  });
 
   // Form validation
   const form = document.getElementById('contact-form');

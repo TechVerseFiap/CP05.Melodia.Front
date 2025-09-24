@@ -1,189 +1,316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Melodia — Sua Música, Sua Forma</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Melodia — descubra músicas, crie playlists e desfrute da melhor qualidade de som.">
-  <style>
-    :root { --primary: #7c3aed; --accent: #06b6d4; }
-    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
-    .btn-primary { background: linear-gradient(90deg,var(--primary), #5b21b6); color: white; }
-  </style>
-</head>
-<body class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-slate-100">""
-  <header id="site-header" class="fixed w-full z-40 transition-all">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10">
-          <i class="fa-solid fa-music text-2xl text-white"></i>
-        </div>
-        <span class="font-semibold text-lg">Melodia</span>
-      </a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#features" class="hover:underline">Funcionalidades</a>
-        <a href="#depoimentos" class="hover:underline">Depoimentos</a>
-        <a href="#contato" class="hover:underline">Contato</a>
-      </div>
-      <button id="btn-menu" class="md:hidden p-2 rounded-md glass">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </nav>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/70 glass">
-      <div class="px-4 pb-4 flex flex-col gap-3">
-        <a href="#features" class="py-2">Funcionalidades</a>
-        <a href="#depoimentos" class="py-2">Depoimentos</a>
-        <a href="#contato" class="py-2">Contato</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-28">
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">Melodia: <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-500">Sua Música, Sua Forma</span></h1>
-        <p class="text-slate-300 mb-6">Descubra novas músicas, crie playlists personalizadas e ouça com qualidade superior — tudo em uma interface intuitiva pensada para amantes de música como você.</p>
-        <div class="flex gap-3 items-center">
-          <button id="play-demo" class="px-4 py-3 rounded-full shadow-lg btn-primary">Ver demonstração</button>
-        </div>
-
-        <div class="mt-8 grid grid-cols-2 gap-3">
-          <div class="p-4 glass rounded-lg flex items-center gap-3">
-            <i class="fa-solid fa-headphones-simple fa-2x text-indigo-300"></i>
-            <div>
-              <div class="text-sm text-slate-300">Qualidade de som</div>
-              <div class="font-semibold">Áudio superior</div>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Melodia — Sua Música, Sua Forma</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta
+      name="description"
+      content="Melodia — descubra músicas, crie playlists e desfrute da melhor qualidade de som."
+    />
+    <style>
+      :root {
+        --primary: #7c3aed;
+        --accent: #06b6d4;
+      }
+      body {
+        font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(6px);
+      }
+      .btn-primary {
+        background: linear-gradient(90deg, var(--primary), #5b21b6);
+        color: white;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-slate-100"
+  >
+    <header id="site-header" class="fixed w-full z-40 transition-all">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10"
+          >
+            <i class="fa-solid fa-music text-2xl text-white"></i>
           </div>
-          <div class="p-4 glass rounded-lg flex items-center gap-3">
-            <i class="fa-solid fa-user-plus fa-2x text-cyan-300"></i>
-            <div>
-              <div class="text-sm text-slate-300">Playlists</div>
-              <div class="font-semibold">Personalizadas</div>
-            </div>
-          </div>
+          <span class="font-semibold text-lg">Melodia</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#features" class="hover:underline">Funcionalidades</a>
+          <a href="#depoimentos" class="hover:underline">Depoimentos</a>
+          <a href="#contato" class="hover:underline">Contato</a>
+        </div>
+        <button id="btn-menu" class="md:hidden p-2 rounded-md glass">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-900/70 glass">
+        <div class="px-4 pb-4 flex flex-col gap-3">
+          <a href="#features" class="py-2">Funcionalidades</a>
+          <a href="#depoimentos" class="py-2">Depoimentos</a>
+          <a href="#contato" class="py-2">Contato</a>
         </div>
       </div>
+    </header>
 
-      <div class="flex items-center justify-center">
-        <div class="w-96 h-96 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-700 p-6 shadow-2xl">
-          <div class="h-full rounded-2xl bg-gradient-to-b from-indigo-900 to-indigo-700 p-4 flex flex-col">
-            <div class="flex items-center justify-between mb-4">
-              <div class="h-10 w-10 rounded-lg bg-white/10"></div>
-              <div class="text-xs text-slate-300">Melodia v1.0</div>
+    <main class="pt-28">
+      <section
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+            Melodia:
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-500"
+              >Sua Música, Sua Forma</span
+            >
+          </h1>
+          <p class="text-slate-300 mb-6">
+            Descubra novas músicas, crie playlists personalizadas e ouça com
+            qualidade superior — tudo em uma interface intuitiva pensada para
+            amantes de música como você.
+          </p>
+          <div class="flex gap-3 items-center">
+            <button
+              id="play-demo"
+              class="px-4 py-3 rounded-full shadow-lg btn-primary"
+            >
+              Ver demonstração
+            </button>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <div class="p-4 glass rounded-lg flex items-center gap-3">
+              <i
+                class="fa-solid fa-headphones-simple fa-2x text-indigo-300"
+              ></i>
+              <div>
+                <div class="text-sm text-slate-300">Qualidade de som</div>
+                <div class="font-semibold">Áudio superior</div>
+              </div>
             </div>
-            <div class="flex-1 rounded-xl bg-white/5 p-4">
-              <div class="h-40 rounded-lg bg-gradient-to-r from-indigo-500 to-cyan-400 flex items-center justify-center text-xl font-semibold">Player Mockup</div>
-              <div class="mt-4 flex items-center justify-between">
-                <div>
-                  <div class="text-sm">Artista Exemplo</div>
-                  <div class="font-semibold">Faixa de Destaque</div>
-                </div>
-                <div class="flex items-center gap-3">
-                  <button class="p-3 rounded-full glass"><i class="fa-solid fa-backward-step"></i></button>
-                  <button class="p-4 rounded-full btn-primary"><i class="fa-solid fa-play"></i></button>
-                  <button class="p-3 rounded-full glass"><i class="fa-solid fa-forward-step"></i></button>
-                </div>
+            <div class="p-4 glass rounded-lg flex items-center gap-3">
+              <i class="fa-solid fa-user-plus fa-2x text-cyan-300"></i>
+              <div>
+                <div class="text-sm text-slate-300">Playlists</div>
+                <div class="font-semibold">Totalmente Únicas</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="features" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 class="text-2xl font-bold mb-6">Funcionalidades</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="p-6 rounded-xl glass hover:scale-105 transition-transform">
-          <i class="fa-solid fa-microphone-lines fa-2x mb-3"></i>
-          <h3 class="font-semibold mb-2">Qualidade de som superior</h3>
-          <p class="text-slate-300 text-sm">Algoritmos de processamento que preservam fidelidade e clareza em qualquer dispositivo.</p>
-        </article>
-        <article class="p-6 rounded-xl glass hover:scale-105 transition-transform">
-          <i class="fa-solid fa-list fa-2x mb-3"></i>
-          <h3 class="font-semibold mb-2">Playlists inteligentes</h3>
-          <p class="text-slate-300 text-sm">Crie playlists com base no seu humor e histórico de audição.</p>
-        </article>
-        <article class="p-6 rounded-xl glass hover:scale-105 transition-transform">
-          <i class="fa-solid fa-compass fa-2x mb-3"></i>
-          <h3 class="font-semibold mb-2">Descoberta</h3>
-          <p class="text-slate-300 text-sm">Recomendações personalizadas para você encontrar novos artistas.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="depoimentos" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 class="text-2xl font-bold mb-6">Depoimentos</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-white/3">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold">AL</div>
-            <div>
-              <div class="font-semibold">Alice M.</div>
-              <div class="text-sm text-slate-300">Melómano</div>
+        <div class="flex items-center justify-center">
+          <div
+            class="w-96 h-96 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-700 p-6 shadow-2xl"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2151698829&color=%23260733&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                font-weight: 100;
+              "
+            >
             </div>
           </div>
-          <blockquote class="text-slate-200">"A interface é linda e a qualidade de som faz toda a diferença. Recomendo!"</blockquote>
         </div>
-        <div class="p-6 rounded-xl bg-white/3">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold">BR</div>
-            <div>
-              <div class="font-semibold">Bruno R.</div>
-              <div class="text-sm text-slate-300">Produtor</div>
+      </section>
+
+      <section
+        id="features"
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <h2 class="text-2xl font-bold mb-6">Funcionalidades</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article
+            class="p-6 rounded-xl glass hover:scale-105 transition-transform"
+          >
+            <i class="fa-solid fa-microphone-lines fa-2x mb-3"></i>
+            <h3 class="font-semibold mb-2">Qualidade de som superior</h3>
+            <p class="text-slate-300 text-sm">
+              Algoritmos de processamento que preservam fidelidade e clareza em
+              qualquer dispositivo.
+            </p>
+          </article>
+          <article
+            class="p-6 rounded-xl glass hover:scale-105 transition-transform"
+          >
+            <i class="fa-solid fa-list fa-2x mb-3"></i>
+            <h3 class="font-semibold mb-2">Playlists inteligentes</h3>
+            <p class="text-slate-300 text-sm">
+              Crie playlists com base no seu humor e histórico de audição.
+            </p>
+          </article>
+          <article
+            class="p-6 rounded-xl glass hover:scale-105 transition-transform"
+          >
+            <i class="fa-solid fa-compass fa-2x mb-3"></i>
+            <h3 class="font-semibold mb-2">Descoberta</h3>
+            <p class="text-slate-300 text-sm">
+              Recomendações personalizadas para você encontrar novos artistas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="depoimentos"
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <h2 class="text-2xl font-bold mb-6">Depoimentos</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-xl bg-white/3">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold"
+              >
+                AL
+              </div>
+              <div>
+                <div class="font-semibold">Alice M.</div>
+                <div class="text-sm text-slate-300">Melómano</div>
+              </div>
+            </div>
+            <blockquote class="text-slate-200">
+              "A interface é linda e a qualidade de som faz toda a diferença.
+              Recomendo!"
+            </blockquote>
+          </div>
+          <div class="p-6 rounded-xl bg-white/3">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold"
+              >
+                BR
+              </div>
+              <div>
+                <div class="font-semibold">Bruno R.</div>
+                <div class="text-sm text-slate-300">Produtor</div>
+              </div>
+            </div>
+            <blockquote class="text-slate-200">
+              "As playlists inteligentes me ajudam a montar sets com muito mais
+              rapidez."
+            </blockquote>
+          </div>
+          <div class="p-6 rounded-xl bg-white/3">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold"
+              >
+                LC
+              </div>
+              <div>
+                <div class="font-semibold">Larissa C.</div>
+                <div class="text-sm text-slate-300">Estudante</div>
+              </div>
+            </div>
+            <blockquote class="text-slate-200">
+              "Perfeito para descobrir novas bandas e educar meu gosto musical."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contato"
+        class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <h2 class="text-2xl font-bold mb-4">Fale conosco / Inscreva-se</h2>
+        <p class="text-slate-300 mb-6">
+          Deixe seu e-mail para receber novidades e participar dos testes beta.
+        </p>
+        <form
+          id="contact-form"
+          class="bg-white/5 p-6 rounded-xl grid gap-4"
+          novalidate
+        >
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              id="name"
+              required
+              placeholder="Nome"
+              class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black"
+            />
+            <input
+              id="email"
+              required
+              placeholder="Email"
+              type="email"
+              class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black"
+            />
+          </div>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Mensagem (opcional)"
+            class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black"
+          ></textarea>
+          <div class="flex items-center justify-between">
+            <button type="submit" class="btn-primary px-4 py-2 rounded-full">
+              Enviar
+            </button>
+            <div id="form-feedback" class="text-sm text-slate-300"></div>
+          </div>
+        </form>
+      </section>
+
+      <footer class="mt-12 border-t border-white/5">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div>
+            <div class="font-semibold text-lg">Melodia</div>
+            <div class="text-sm text-slate-400">
+              © 2025 Melodia. Política de Privacidade
             </div>
           </div>
-          <blockquote class="text-slate-200">"As playlists inteligentes me ajudam a montar sets com muito mais rapidez."</blockquote>
-        </div>
-        <div class="p-6 rounded-xl bg-white/3">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-black font-bold">LC</div>
-            <div>
-              <div class="font-semibold">Larissa C.</div>
-              <div class="text-sm text-slate-300">Estudante</div>
-            </div>
+          <div class="flex items-center gap-4">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </div>
-          <blockquote class="text-slate-200">"Perfeito para descobrir novas bandas e educar meu gosto musical."</blockquote>
         </div>
-      </div>
-    </section>
+      </footer>
+    </main>
 
-    <section id="contato" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 class="text-2xl font-bold mb-4">Fale conosco / Inscreva-se</h2>
-      <p class="text-slate-300 mb-6">Deixe seu e-mail para receber novidades e participar dos testes beta.</p>
-      <form id="contact-form" class="bg-white/5 p-6 rounded-xl grid gap-4" novalidate>
-        <div class="grid md:grid-cols-2 gap-4">
-          <input id="name" required placeholder="Nome" class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black">
-          <input id="email" required placeholder="Email" type="email" class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black">
-        </div>
-        <textarea id="message" rows="4" placeholder="Mensagem (opcional)" class="p-3 rounded-md bg-white/3 placeholder-slate-300 outline-none text-black"></textarea>
-        <div class="flex items-center justify-between">
-          <button type="submit" class="btn-primary px-4 py-2 rounded-full">Enviar</button>
-          <div id="form-feedback" class="text-sm text-slate-300"></div>
-        </div>
-      </form>
-    </section>
-
-    <footer class="mt-12 border-t border-white/5">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>
-          <div class="font-semibold text-lg">Melodia</div>
-          <div class="text-sm text-slate-400">© 2025 Melodia. Política de Privacidade</div>
-        </div>
-        <div class="flex items-center gap-4">
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
