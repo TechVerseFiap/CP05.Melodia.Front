@@ -1,4 +1,3 @@
-// Simple interactivity: mobile menu toggle, header transparency on scroll, demo modal
 document.addEventListener('DOMContentLoaded', () => {
   const btnMenu = document.getElementById('btn-menu');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -17,14 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // Form validation
   const form = document.getElementById('contact-form');
   const emailInput = document.getElementById('email');
   const nameInput = document.getElementById('name');
   const feedback = document.getElementById('form-feedback');
 
   function isValidEmail(email) {
-    // simple but effective regex
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
@@ -44,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Simulate successful submission
     feedback.textContent = 'Obrigado! Recebemos seu contato.';
     form.reset();
   });
